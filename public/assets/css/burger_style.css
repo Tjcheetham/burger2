@@ -1,0 +1,16 @@
+body {
+    background-color: lightgreen;
+    text-align: center;
+  };
+
+li {
+  display: flex;
+  justify-content: flex-end;
+};
+
+.submit {
+  line-height:50px;
+  font-size:14pt;
+  padding: 20px;
+}
+  
