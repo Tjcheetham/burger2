@@ -1,5 +1,4 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
-$(function() {
     $(".change-devoured").on("click", function(event) {
       console.log("clicked devoured");
       const id = $(this).data("id");
@@ -28,7 +27,7 @@ $(function() {
       event.preventDefault();
   
       const newBurger = {
-        name: $("#ca").val().trim(),
+        burger_name: $("#ca").val().trim(),
         devoured: 0
       };
   
@@ -50,7 +49,8 @@ $(function() {
   
       // Send the DELETE request.
       $.ajax("/api/burgers/" + id, {
-        type: "DELETE"
+        type: "DELETE",
+        data: { id }
       }).then(
         function() {
           console.log("deleted burger", id);
@@ -59,5 +59,4 @@ $(function() {
         }
       );
     });
-  });
   
