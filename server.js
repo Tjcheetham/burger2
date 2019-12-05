@@ -24,7 +24,7 @@ require("./routes/api-routes.js")(app);
 db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     // Log (server-side) when our server has started
-    console.log("Server listening on: http://localhost:" + PORT);
+    console.log("Server listening on: " + PORT);
   });
 })
 // Start our server so that it can begin listening to client requests.
